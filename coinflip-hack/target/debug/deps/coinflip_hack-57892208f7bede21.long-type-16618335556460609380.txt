@@ -1,0 +1,1 @@
+Tx<TxScEnv<<Self as multiversx_sc::contract_base::ContractBase>::Api>, (), ManagedAddress<<Self as multiversx_sc::contract_base::ContractBase>::Api>, (), (), FunctionCall<<Self as multiversx_sc::contract_base::ContractBase>::Api>, OriginalResultMarker<multiversx_sc::types::BigUint<<Self as multiversx_sc::contract_base::ContractBase>::Api>>>

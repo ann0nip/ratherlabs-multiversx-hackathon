@@ -1,0 +1,19 @@
+[
+  "bigIntSetInt64",
+  "checkNoPayment",
+  "getBlockNonce",
+  "getNumArguments",
+  "mBufferAppend",
+  "mBufferAppendBytes",
+  "mBufferFinish",
+  "mBufferGetArgument",
+  "mBufferGetLength",
+  "mBufferNew",
+  "mBufferSetBytes",
+  "mBufferStorageLoad",
+  "mBufferStorageStore",
+  "managedAsyncCall",
+  "managedSignalError",
+  "managedWriteLog",
+  "signalError"
+]

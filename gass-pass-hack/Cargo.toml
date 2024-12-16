@@ -1,0 +1,27 @@
+[package]
+name = "gass-pass-hack"
+version = "0.0.0"
+publish = false
+edition = "2021"
+authors = ["you"]
+
+[lib]
+path = "src/gass_pass_hack.rs"
+
+[dependencies.bump-common]
+path = "src/common"
+
+[dependencies.multiversx-sc]
+version = "0.54.6"
+
+[dev-dependencies]
+num-bigint = "0.4"
+
+[dev-dependencies.multiversx-sc-scenario]
+version = "0.54.6"
+
+[workspace]
+members = [
+    ".",
+    "meta",
+]

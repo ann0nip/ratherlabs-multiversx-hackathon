@@ -1,0 +1,52 @@
+{
+    "name": "Gaspass Test",
+    "gasSchedule": "dummy",
+    "steps": [
+        {
+            "step": "setState",
+            "accounts": {
+                "address:caller": {
+                    "nonce": "0",
+                    "balance": "1000000000000000000"
+                },
+                "sc:contract": {
+                    "nonce": "0",
+                    "balance": "0",
+                    "code": "mxsc:../output/gass-pass-hack.mxsc.json"
+                }
+            }
+        },
+        {
+            "step": "scCall",
+            "id": "1",
+            "tx": {
+                "from": "address:caller",
+                "to": "sc:contract",
+                "function": "gaspass",
+                "arguments": [],
+                "gasLimit": "0x100000",
+                "gasPrice": "0x01"
+            },
+            "expect": {
+                "out": [
+                    "false"
+                ],
+                "status": "",
+                "logs": [
+                    {
+                        "address": "sc:contract",
+                        "endpoint": "str:gaspass",
+                        "topics": [
+                            "str:gaspass",
+                            "address:caller",
+                            "bool:false"
+                        ],
+                        "data": []
+                    }
+                ],
+                "gas": "*",
+                "refund": "*"
+            }
+        }
+    ]
+}

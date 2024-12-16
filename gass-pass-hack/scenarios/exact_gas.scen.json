@@ -1,0 +1,57 @@
+{
+    "name": "gaspass exact gas test",
+    "steps": [
+        {
+            "step": "setState",
+            "accounts": {
+                "address:owner": {
+                    "nonce": "1",
+                    "balance": "100000000000000000"
+                }
+            },
+            "newAddresses": [
+                {
+                    "creatorAddress": "address:owner",
+                    "creatorNonce": "1",
+                    "newAddress": "sc:gaspass"
+                }
+            ]
+        },
+        {
+            "step": "scDeploy",
+            "id": "deploy",
+            "tx": {
+                "from": "address:owner",
+                "contractCode": "mxsc:../output/gass-pass-hack.mxsc.json",
+                "arguments": [],
+                "gasLimit": "5,000,000",
+                "gasPrice": "0"
+            },
+            "expect": {
+                "out": [],
+                "status": "",
+                "logs": []
+            }
+        },
+        {
+            "step": "scCall",
+            "id": "exact-gas",
+            "tx": {
+                "from": "address:owner",
+                "to": "sc:gaspass",
+                "function": "gaspass",
+                "arguments": [],
+                "gasLimit": "3002590",
+                "gasPrice": "0"
+            },
+            "expect": {
+                "out": [
+                    "true"
+                ],
+                "status": "",
+                "message": "",
+                "logs": "*"
+            }
+        }
+    ]
+}

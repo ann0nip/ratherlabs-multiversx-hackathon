@@ -1,0 +1,1 @@
+/Users/pandora/Documents/ann0nip/multiversX/hackathon/coinflip-hack/target/wasm32-unknown-unknown/release/coinflip_hack_wasm.wasm: /Users/pandora/Documents/ann0nip/multiversX/hackathon/coinflip-hack/src/coinflip_hack.rs /Users/pandora/Documents/ann0nip/multiversX/hackathon/coinflip-hack/wasm/src/lib.rs
